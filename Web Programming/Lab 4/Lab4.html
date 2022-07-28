@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+.menu
+{
+  width: 150px;
+  background: red;
+  color: white;
+  height: 20px;
+  text-align: center;
+  position: center;
+  
+
+}
+
+.submenu
+{
+  border: 1px solid white;
+  background: red;
+  color: white;
+  text-align: center;
+
+  display: none;
+  max-width: 150px;
+  max-height: 19px;
+
+}
+.submenu:hover
+{
+  background: black;
+}
+
+.menu:hover .submenu
+{
+
+  display: block;
+}
+
+
+.nested
+{
+   border: 1px solid white;
+  background: red;
+  color: white;
+  text-align: center;
+  display: none;
+  position: relative;
+  left: 150px;
+  top: -20px;
+}
+
+.submenu:hover .nested
+{
+  display: block;
+}
+
+.nested:hover
+{
+  background: black;
+  display: block;
+}
+
+
+
+</style>
+</head>
+<body>
+
+  <script >
+    const menu = document.createElement("div");
+    const menu_text = document.createTextNode("Menu");
+
+    menu.classList.add("menu")
+
+    menu.appendChild(menu_text)
+
+    for (var i = 1; i <= 5; i++) {
+      let item = document.createElement("div")
+      let item_text = document.createTextNode("Item " + i)
+      item.appendChild(item_text)
+      item.classList.add("submenu")
+      let noItems = Math.floor(Math.random() * (6 - 3) ) + 3;
+      for (var j = 1; j<= noItems;j++){
+        let subitem = document.createElement("a")
+        let subitem_text = document.createTextNode("Item " + j)
+
+        subitem.appendChild(subitem_text)
+        subitem.classList.add("nested")
+        item.appendChild(subitem)
+      }
+
+      menu.appendChild(item)
+
+    }
+    document.body.appendChild(menu)
+
+  </script>
+
+
+</body>
+</html>

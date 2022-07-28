@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.navbar-flex-middle
+{
+  align-items: center;
+  display: flex;
+}
+
+.navbar-header
+{
+  background: white;
+  height: 1.5rem;
+  padding: 1.5rem;
+  position: relative;
+
+}
+
+.navbar-text
+{
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.navbar-text-secondary
+{
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.navbar-button-gap
+{
+  padding: 0 0.3rem;
+}
+
+.navbar-relative
+{
+  position: relative;
+}
+
+
+
+.navbar-logo
+{
+  flex-shrink: 0;
+  padding-right: 0.1rem;
+}
+
+.navbar-button
+{
+  position: relative;
+    align-items: center;
+    border: none;
+    display: inline-flex;
+    min-width: 5rem;
+    padding: 0 0.9rem;
+    justify-content: center;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+
+.navbar-button-small
+{
+  position: relative;
+    align-items: center;
+    border: none;
+    display: inline-flex;
+    min-width: 3rem;
+    padding: 0 0.9rem;
+    justify-content: center;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+
+.navbar-button-ghost
+{
+  color: #5624d0;
+  background-color: transparent;
+  min-width: auto;
+}
+
+.navbar-button-secondary
+{
+  color: black;
+  background-color: transparent;
+  border: 1px solid black;
+  height: 2.5rem;
+
+}
+
+.navbar-button-primary
+{
+  color: white;
+  background-color: black;
+  height: 2.5rem;
+}
+
+.navbar-dropdown-button
+{
+  margin: 0.7rem 0;
+  font-weight: 200;
+    font-size: 0.9rem;
+}
+
+.navbar-search
+{
+  flex-grow: 1;
+    height: 2.8rem;
+    border: 1px solid #1c1d1f;
+    border-radius: 1000px;
+    background-color: #f7f9fa;
+    margin: 1.2rem 1.2rem;
+    position: relative;
+    max-width: none;
+}
+
+.navbar-search-form
+{
+  display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: row-reverse;
+}
+
+.navbar-search-input
+
+{
+  border-radius: 0;
+  border: 0;
+  flex: 1;
+  width: 100%;
+  display: block;
+  background-color: transparent;
+
+}
+
+.container-main-black
+{
+  background-color:  #1c1d1f;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+}
+
+.container-div-primary
+{
+
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0rem;
+  margin-bottom: 0rem;
+  overflow: auto;
+  margin-left: 13.5rem;
+  max-width: 40rem;
+
+}
+
+.container-header-text
+{
+  color: #cec0fc;
+  font-weight: 1000;
+    font-size: 1rem;
+    text-decoration-line: none;
+    margin-right: 1rem;
+
+
+}
+
+.container-title-text
+{
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  letter-spacing: -0.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.container-subtitle-text
+{
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 200;
+  margin-top: 0.5rem;
+}
+
+.container-rating-text
+{
+  color: #f3ca8c;
+  margin-right: 0.2rem;
+  font-size: 1rem;
+  font-weight: 1000;
+  margin-top: 0.6rem;
+}
+.container-info-text
+{
+  color: #cec0fc;
+  font-weight: 200;
+  font-size: 1rem;
+  margin-top: 0.6rem; 
+  margin-right: 2rem;
+}
+.container-info-text-left
+{
+  color: #cec0fc;
+  font-weight: 200;
+  font-size: 1rem;
+  margin-top: 0.6rem; 
+  margin-left: 0.4rem;
+}
+
+.container-sidebar
+{
+  display: block;
+  position: absolute;
+  min-width: 35rem;
+  top: 6.6rem;
+  margin-left: 60rem;
+  min-height: 35rem;
+}
+
+.sidebar
+{
+  width: 21rem;
+  z-index: 1;
+  background-color: white;
+  min-height: 43rem;
+  box-shadow: 0 2px 4px;
+}
+
+.sidebar-content
+{
+  margin-top: 1.4rem;
+  margin-left: 1.5rem;
+}
+
+.sidebar-button
+{
+      position: relative;
+    align-items: center;
+    border: none;
+    display: inline-flex;
+    min-width: 18.5rem;
+    margin-left: 1.2rem;
+    min-height: 3rem;
+    justify-content: center;
+    vertical-align: bottom;
+    white-space: nowrap;
+    margin-bottom: 0.4rem;
+}
+
+
+
+.money-back {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 1.2rem;
+    text-align: center;
+}
+
+.sidebar-text
+{
+  margin-left: 1.2rem;
+  display: block;
+  margin-top: 2rem;
+
+}
+
+.sidebar-list
+{
+  margin-left: 1.2rem;
+  display: block;
+  margin-top: 0.4rem;
+}
+
+.sub-container
+{
+  margin-left:13.5rem ;
+  border: 1px solid black;
+  display: block;
+  min-width: 20rem;
+  min-height: 20rem;
+  position: absolute;
+  width: 40rem;
+  background-color: transparent;
+  height: 40rem;
+  z-index: 2;
+  margin-top: 2.5rem;
+  padding: 24px;
+}
+
+.sub-container-text
+{
+  margin: 0 0rem 1.6rem;
+      font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1.6rem;
+}
+
+.sub-container-grid
+{
+  display: grid;
+  grid-template-columns: auto auto ;
+
+}
+.grid-item
+{
+  font-size: 1.1rem;
+  display: flex;
+  margin-bottom: 1rem;
+}
+body
+{
+  margin: 0;
+  padding: 0;
+}
+</style>
+</head>
+<body>  
+
+
+  <div class="navbar-flex-middle navbar-header navbar-text">
+    <a href="/" class="navbar-flex-middle navbar-logo">
+  <img src="logo-udemy.jpg" width="91" height="34" >
+</a>
+  <nav class="navbar-button-gap navbar-relative">
+    <button type="button" tabindex="0" class="navbar-button navbar-button-ghost navbar-dropdown-button">
+    <span class="navbar-text"> Categories</span>
+  </button>
+</nav>
+  <div class="navbar-search">
+    <form class="navbar-search-form">
+      <input type="hidden" name="sq">
+      <input type="text" name="search" placeholder="Search for anything" class="navbar-search-input">
+      <button type="submit " tabindex="-1" style="background-color: transparent; border: 0;">
+        <img src="searchpic.jpg" width="20" height="20" style="background-color: transparent; fill: currentColor;">
+      </button>
+    </form>
+    
+  </div>
+  <nav class="navbar-button-gap navbar-relative">
+    <button type="button" tabindex="0" class="navbar-button navbar-button-ghost navbar-dropdown-button">
+    <span class="navbar-text"> Udemy Business</span>
+  </button>
+</nav>
+  <nav class="navbar-button-gap navbar-relative">
+    <button type="button" tabindex="0" class="navbar-button navbar-button-ghost navbar-dropdown-button">
+    <span class="navbar-text"> Teach on Udemy</span>
+  </button>
+</nav>
+  <nav class="navbar-button-gap navbar-relative">
+    <button type="button" tabindex="0" class="navbar-button navbar-button-ghost navbar-dropdown-button">
+    <img src="shoppingcart.png" width="24" height="24">
+  </button>
+</nav>
+
+</nav>
+  <nav class="navbar-button-gap navbar-relative">
+    <button type="button" tabindex="0" class=" navbar-button  navbar-button-secondary">
+    <span class="navbar-text"> Log in</span>
+  </button>
+</nav>
+
+</nav>
+  <nav class="navbar-button-gap navbar-relative">
+    <button type="button" tabindex="0" class=" navbar-button  navbar-button-primary">
+    <span class="navbar-text-secondary"> Sign in</span>
+  </button>
+</nav>
+
+<nav class="navbar-button-gap navbar-relative">
+    <button type="button" tabindex="0" class="navbar-button-small navbar-button-secondary">
+    <img src="network.png" width="24" height="24">
+  </button>
+</nav>
+
+</div>
+
+<div class="container-main-black">
+  <div class="container-div-primary">
+    <a href="#" class="container-header-text"> Developement</a>
+    <a class="container-header-text" > ></a>
+     <a href="#" class="container-header-text"> Web Development</a>
+  </div>
+
+  <div  class="container-div-primary">
+    <h1 class="container-title-text"> The Web Developer Bootcamp 2022</h1>
+
+
+  </div>
+    <div class="container-div-primary container-subtitle-text">
+        COMPLETELY REDONE - The only course you need to learn web development - HTML, CSS, JS, Node, and More!
+    </div>
+
+    <div class="container-div-primary container-subtitle-text">
+        <span class="container-rating-text">4.7</span>
+        <img src="star.png" width="14" height="14" style="margin-top: 10px;">
+        <img src="star.png" width="14" height="14" style="margin-top: 10px;">
+        <img src="star.png" width="14" height="14" style="margin-top: 10px;">
+        <img src="star.png" width="14" height="14" style="margin-top: 10px;">
+        <img src="star.png" width="14" height="14" style="margin-top: 10px;">
+
+        <a href="#" class="container-info-text-left">(230,267) ratings</a>
+        <span class="container-info-text-left" style="color: white;">768,802 students</span>
+
+    </div>
+    <div class="container-div-primary container-subtitle-text">
+      <span class="container-info-text" style="color:white;"> Created by <a href="#" class="container-info-text">Colt Steele</a></span>
+    </div>
+    <div class="container-div-primary container-subtitle-text">
+      <span class="container-info-text" style="color:white;"> Last updated 3/2022</span>
+      <span class="container-info-text" style="color:white;"> English</span>
+      <span class="container-info-text" style="color:white;"> English [Auto], French[Auto] </span>
+
+    </div>
+
+</div>
+<div class="container-sidebar">
+      <div class="sidebar">
+        <img src="preview.png" width="337" >
+
+        <div class="sidebar-content">
+          <span><h1>RON449.99</h1></span>
+        </div>
+        <button class="sidebar-button" style="color:white; background-color: #a435f0; font-size: 1rem; font-weight: 700; word-spacing: -0.1rem;"> Add to cart</button>
+        <button class="sidebar-button" style="color:#1c1d1f; background-color: transparent; font-size: 1rem; font-weight: 700; word-spacing: -0.1rem; border: 1px solid black;" > Buy now</button>
+        <span class="money-back">30-Day Money-Back Guarantee</span>
+
+        <span class="sidebar-text" style="font-size: 0.8rem;"><h2>This course includes:</h2></span>
+        <ul class="sidebar-list">
+          <li style="margin-left: -1.2rem;">63.5 on demand video</li>
+          <li style="margin-left: -1.2rem;">42 articles</li>
+          <li style="margin-left: -1.2rem;">116 downloadable resources</li>
+          <li style="margin-left: -1.2rem;">63 coding exercises</li>
+          <li style="margin-left: -1.2rem;">Full lifetime access</li>
+          <li style="margin-left: -1.2rem;">Access on mobile or TV</li>
+          <li style="margin-left: -1.2rem;">Certificate of completion</li>
+          
+        </ul>
+      </div>
+   </div>
+
+  <div class="sub-container">
+    <h2 class="sub-container-text">What you'll learn</h2>
+    <div class="sub-container-grid">
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">The ins and outs of HTML5, CSS3, and Modern JavaScript for 2021</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Make REAL web applications using cutting-edge technologies</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Create responsive, accessible, and beautiful layouts</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Recognize and prevent common security exploits like SQL-Injection & XSS</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Continue to learn and grow as a developer, long after the course ends</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Create a blog application from scratch using Node, Express, and MongoDB.</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Create a complicated yelp-like application from scratch</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Deploy your applications and work with cloud databases</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Create static HTML and CSS portfolio sites and landing pages</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Think like a developer. Become an expert at Googling code questions!</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Create complex HTML forms with validations</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Implement full authentication from scratch!</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Use CSS Frameworks including Bootstrap 5, Semantic UI, and Bulma</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Implement responsive navbars on websites</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Use JavaScript variables, conditionals, loops, functions, arrays, and objects</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Write Javascript functions, and understand scope and higher order functions</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Make REAL web applications using cutting-edge technologies</div></div>
+      <div class="grid-item"> <img src="checkmark.png" width="10" height="10" style="margin-right: 1rem; padding-left: 0.5rem;"><div style="font-size:1rem">Make REAL web applications using cutting-edge technologies</div></div>
+    </div>
+  </div>
+
+
+</body>
+</html>

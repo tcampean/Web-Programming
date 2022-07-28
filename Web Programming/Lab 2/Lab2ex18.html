@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.mainDiv {
+    clear: both;
+    position: relative;
+}
+
+.rainbow1 {
+    background: linear-gradient(60deg, red 10%, transparent 15%), linear-gradient(60deg, orange 20%, transparent 25%), linear-gradient(60deg, yellow 30%, transparent 35%);
+    height: 700px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.rainbow2 {
+    background: linear-gradient(60deg, green 45%, transparent 50%), linear-gradient(60deg, blue 60%, transparent 65%);
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.rainbow3 {
+    background: linear-gradient(60deg, indigo 80%, transparent 85%), linear-gradient(60deg, violet 100%, transparent 100%);
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+</style>
+</head>
+<body>
+
+<div class="mainDiv">
+    <div class="rainbow1"></div>
+    <div class="rainbow2"></div>
+    <div class="rainbow3"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.webpage').click(function() {
+
+    $(this).animate({
+        right: '-100%'
+    }, function() {
+        $(this).css('right', '100%');
+        $(this).appendTo('#container');
+    });
+
+    $(this).next().animate({
+        right: '0%'
+    });
+});
+});
+</script>
+
+<style>
+	body {
+    padding: 0px;
+    margin: 0px;    
+}
+
+#container {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.webpage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    text-align: center;
+    right: 100%;
+}
+
+#webpage1 {
+    background-color: green;
+    right: 0%;
+}
+
+#webpage2 {
+    background-color: yellow;
+}
+
+#webpage3 {
+    background-color: red;
+}
+
+#webpage4 {
+    background-color: orange;
+}
+
+</style>
+</head>
+<body>
+<div id="container">
+    
+    <div id="webpage1" class="webpage"><h1> Welcome!</h1></div>
+    <div id="webpage2" class="webpage"><h1>Check out this picture!</h1><img src="car2.jpg"></div>
+    <div id="webpage3" class="webpage"><h4>Stars always shine the brightest in the woods</h4><img src="star.png"> <img src="star.png"></div>
+    <div id="webpage4" class="webpage"><h5>Check out this picture of another car!</h5> <img src="car1.jpg"></div>
+    
+</div>
+
+</body>
+</html>
